@@ -1,0 +1,14 @@
+======= The VC compiler =======
+
+Pass 1: Lexical and syntactic Analysis
+Pass 2: Semantic Analysis
+ERROR: 6(9)..6(15): *9: incompatible type for this binary operator: *
+Compilation was unsuccessful.
+int f() { return 1; }
+float g() { return 1.0; }
+int i;
+float x;
+int main() {
+x = i + x * f() / g();
+return 0;
+}
